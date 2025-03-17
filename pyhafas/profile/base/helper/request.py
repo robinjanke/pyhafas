@@ -89,6 +89,7 @@ class BaseRequestHelper(RequestHelperInterface):
 
         res = self.request_session.post(
             self.url_formatter(data),
+            verify=False,
             data=data,
             headers={
                 'User-Agent': self.userAgent,
