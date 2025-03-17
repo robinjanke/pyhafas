@@ -88,6 +88,7 @@ class BaseRequestHelper(RequestHelperInterface):
         data = json.dumps(data)
 
         res = self.request_session.post(
+            verify=False,
             self.url_formatter(data),
             data=data,
             headers={
